@@ -1,0 +1,19 @@
+.navbar {
+  background-color: rgb(0, 136, 255);
+  font-weight: 600;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px 0px 10px 0px;
+}
+.navbar-items {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+a {
+  span {
+    color: white;
+  }
+}
