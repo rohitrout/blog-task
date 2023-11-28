@@ -6,7 +6,6 @@ const page = async () => {
     "https://cdn.contentful.com:443/spaces/sy2gh0dh8klw/environments/master/entries?access_token=p9V5Iu1TFdw4NdvnL3bR2yiXMhzGM1KTjqCP-pSPNUk"
   );
   const res = await data.json();
-  //   console.log(res.items);
 
   return (
     <div className="blog">

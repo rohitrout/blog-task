@@ -16,18 +16,29 @@ export default function Search() {
     console.log(searchResults);
     console.log(query);
   };
+  const handleChange = (e: any) => {
+    setQuery(e.target.value);
+    handleSearch();
+  };
+
+  const handleLinkClick = () => {
+    setSeeSearchBox(false);
+    setResults([]);
+  };
 
   return (
     <div className="search">
       <input
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleChange}
         onFocus={() => setSeeSearchBox(true)}
-        onBlur={() => setSeeSearchBox(false)}
+        // onBlur={() => setSeeSearchBox(false)}
       />
       <button onClick={handleSearch}>Search</button>
-      {seeSearchBox && <SearchResults results={results} />}
+      {seeSearchBox && (
+        <SearchResults results={results} onLinkClick={handleLinkClick} />
+      )}
     </div>
   );
 }
