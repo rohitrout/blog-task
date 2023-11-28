@@ -27,7 +27,6 @@ const page = async ({ params }: { params: { id: string } }) => {
       </Link>
       <div>
         <Image
-          priority
           src={`https:${targetAsset}`}
           alt="image"
           height={300}
